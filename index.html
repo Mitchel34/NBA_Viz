@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Visualizations</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Chart.js and Date Adapter Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/date-fns@2.30.0/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>NBA Data Visualizations</h1>
+    </header>
+
+    <main>
+        <section class="chart-container">
+            <div class="chart-card">
+                <h2>Who Will Be the League MVP?</h2>
+                <div id="mvpChartContainer">
+                    <canvas id="mvpChart"></canvas>
+                    <div id="mvpDetailChart" class="detail-chart"></div>
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <h2>Which Team Will Win the Championship?</h2>
+                <div id="champChartContainer">
+                    <div id="conferenceFilter">
+                        <label>Conference: 
+                            <select id="conferenceSelect">
+                                <option value="all">All</option>
+                                <option value="east">Eastern</option>
+                                <option value="west">Western</option>
+                            </select>
+                        </label>
+                    </div>
+                    <canvas id="champChart"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <h2>Which Player Will Lead the League in Scoring?</h2>
+                <div id="scoringChartContainer">
+                    <div id="playerToggle" class="toggle-container"></div>
+                    <canvas id="scoringChart"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <h2>Which Team Has the Best Bench Strength?</h2>
+                <div id="benchChartContainer">
+                    <canvas id="benchChart"></canvas>
+                    <div id="benchDetailChart" class="detail-chart"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>NBA Data Visualization Project</p>
+    </footer>
+
+    <!-- Load the JavaScript files -->
+    <script src="mvpChart.js"></script>
+    <script src="champChart.js"></script> 
+    <script src="scoringChart.js"></script>
+    <script src="benchChart.js"></script>
+    <script src="control.js"></script>
+</body>
+</html>
