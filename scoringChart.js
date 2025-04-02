@@ -58,7 +58,7 @@ function getTopScoringPlayers(data, count) {
 }
 
 function createPlayerToggleOptions(players) {
-    const container = document.getElementById('playerToggles');
+    const container = document.getElementById('playerToggle');
     if (!container) return;
     
     container.innerHTML = '';
