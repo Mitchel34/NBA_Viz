@@ -1,5 +1,0 @@
-numpy==2.2.4
-flask==3.0.2
-flask-cors==4.0.0
-pandas
-kagglehub>=0.2.0
