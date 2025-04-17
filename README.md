@@ -10,7 +10,7 @@ Game Plan
 * ├── scoringChart.js    # Visualization 3 (Engineer 3)
 * ├── benchChart.js      # Visualization 4 (Engineer 4)
 * ├── data/              # JSON files from Python
-* └── server.py          # (Optional) Python server
+* ├── server.js          # Node.js Express server
 * 
 * Development: Each engineer works on their own chart file, fetching data from the processed JSON files and integrating interactions via control.js.
 
@@ -20,24 +20,17 @@ This project uses the ["NBA Player Stats Season 2425"](https://www.kaggle.com/da
 
 ## Setup and Installation
 
-1. Install the required Python packages:
-   ```
-   pip install -r requirements.txt
-   ```
-
-2. Set up Kaggle API credentials:
-   - Create a Kaggle account if you don't have one
-   - Go to your account settings (https://www.kaggle.com/account)
-   - Create a new API token (this will download a kaggle.json file)
-   - Place this file in `~/.kaggle/kaggle.json` (or `%USERPROFILE%\.kaggle\kaggle.json` on Windows)
-   - Ensure the file permissions are secure: `chmod 600 ~/.kaggle/kaggle.json`
-
-3. Run the server:
-   ```
-   python server.py
+1. Install Node.js dependencies:
+   ```bash
+   npm install
    ```
 
-4. Open a browser and navigate to:
+2. Run the server:
+   ```bash
+   npm start
+   ```
+
+3. Open a browser and navigate to:
    ```
    http://localhost:5000
    ```
