@@ -154,6 +154,25 @@ select {
     margin-bottom: 0.3rem;
 }
 
+/* Styles for trade impact visualization */
+.trade-impact-card {
+    grid-column: 1 / -1;
+    height: auto;
+    min-height: 350px;
+}
+
+#tradeImpactContainer canvas {
+    height: 250px;
+    margin-bottom: 1rem;
+}
+
+.toggle-container button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .chart-container {

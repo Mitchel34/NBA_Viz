@@ -177,7 +177,7 @@ function getPlayerColor(playerName) {
         'Giannis Antetokounmpo': 'rgba(0, 71, 27, 0.8)', // Bucks green
         'Stephen Curry': 'rgba(29, 66, 138, 0.8)',      // Warriors blue
         'Nikola Jokić': 'rgba(13, 34, 64, 0.8)',        // Nuggets blue
-        'Luka Dončić': 'rgba(0, 83, 188, 0.8)',         // Mavericks blue
+        'Luka Doncic': 'rgba(0, 83, 188, 0.8)',         // Updated: removed accent mark
         'Joel Embiid': 'rgba(237, 23, 76, 0.8)',        // 76ers red
         'Jayson Tatum': 'rgba(0, 122, 51, 0.8)',        // Celtics green
         'Donovan Mitchell': 'rgba(134, 0, 56, 0.8)',    // Cavaliers wine

@@ -29,14 +29,16 @@ function loadAllData() {
         fetch('data/mvp_data.json').then(response => response.json()),
         fetch('data/champ_data.json').then(response => response.json()),
         fetch('data/scoring_data.json').then(response => response.json()),
-        fetch('data/bench_data.json').then(response => response.json())
+        fetch('data/bench_data.json').then(response => response.json()),
+        fetch('data/trade_impact_data.json').then(response => response.json())
     ])
-    .then(([mvpData, champData, scoringData, benchData]) => {
+    .then(([mvpData, champData, scoringData, benchData, tradeImpactData]) => {
         // Initialize all charts with their respective data
         if (window.initMVPChart) window.initMVPChart(mvpData);
         if (window.initChampChart) window.initChampChart(champData);
         if (window.initScoringChart) window.initScoringChart(scoringData);
         if (window.initBenchChart) window.initBenchChart(benchData);
+        if (window.initTradeImpactChart) window.initTradeImpactChart(tradeImpactData);
         
         console.log('All charts initialized successfully');
     })
@@ -69,4 +71,19 @@ window.handleScoringToggle = function(playerName, isActive) {
 window.handleBenchPieClick = function(teamName) {
     console.log(`Bench pie slice clicked for team: ${teamName}`);
     // This function will be implemented in benchChart.js but is referenced here
+};
+
+window.handleTradeImpactSelection = function(playerName, teamCode) {
+    console.log(`Trade impact selection: ${playerName || 'Team'} ${teamCode}`);
+    
+    // Cross-visualization interactions
+    if (playerName && playerName.toLowerCase().includes('luka') && window.handleScoringToggle) {
+        // Highlight Luka in other visualizations
+        console.log('Highlighting Luka Doncic in other charts'); // Removed accent mark
+    }
+    
+    if (teamCode === 'LAL' && window.filterChampChartByConference) {
+        // Highlight Lakers in championship visualization
+        console.log('Highlighting Lakers in championship chart');
+    }
 };
